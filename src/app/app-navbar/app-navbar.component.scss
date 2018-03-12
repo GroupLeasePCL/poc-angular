@@ -1,5 +1,36 @@
-.navbar-nav.pull-right {
-  .dropdown-menu-right {
-    left: auto !important;
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  
+  &.bg-gl {
+    background: linear-gradient(90deg, #8BC53F 0%, #069DD8 100%);
+    
+    .navbar-toggler {
+      color: white;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      padding: 0 60px;
+    }
+  }
+  
+  .nav-item {
+    @media (min-width: 768px) {
+      padding-right: 25px;
+    }
+  
+    a {
+      font-size: larger;
+    }
+  }
+  .pull-right {
+    .dropdown-menu-right {
+      left: auto !important;
+    }
   }
 }
+

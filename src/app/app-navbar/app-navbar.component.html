@@ -1,19 +1,21 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">GL Logo</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-gl fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo.png" alt="Logo">
+  </a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse"
-    (click)="isNavbarCollapsed = !isNavbarCollapsed"
-    aria-controls="navbarsDefault"
-    aria-expanded="false"
+    (click)="toggleCollapse()"
+    aria-controls="navbarDefault"
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarsDefault" [ngbCollapse]="isNavbarCollapsed">
+  <div class="collapse navbar-collapse" id="navbarDefault" [ngbCollapse]="isNavbarCollapsed">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span> </a>
+        <a class="nav-link" href="#">Home </a>
       </li>
       <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" ngbDropdownToggle>Employee</a>
+        <a class="nav-link dropdown-toggle" href="#" ngbDropdownToggle>Employee</a>
         <div class="dropdown-menu" ngbDropdownMenu>
           <a class="dropdown-item" href="#">Registration</a>
         </div></li>
@@ -21,7 +23,7 @@
     <div class="pull-right">
       <ul class="navbar-nav pull-right">
         <li class="nav-item dropdown" ngbDropdown>
-          <a class="nav-link dropdown-toggle" ngbDropdownToggle>Sereysopheak<b class="caret"></b></a>
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle>Sereysopheak</a>
           <ul class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
             <a class="dropdown-item" href="#">My Account</a>
             <a class="dropdown-item" href="#">Settings</a>
@@ -32,10 +34,5 @@
         </li>
       </ul>
     </div>
-    <!--     <form class="form-inline my-2 my-lg-0"> -->
-<!--       <input class="form-control mr-sm-2" type="text" -->
-<!--         placeholder="Search" aria-label="Search"> -->
-<!--       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-<!--     </form> -->
   </div>
 </nav>
