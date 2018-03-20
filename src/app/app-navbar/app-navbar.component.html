@@ -11,26 +11,25 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarDefault" [ngbCollapse]="isNavbarCollapsed">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home </a>
-      </li>
-      <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" href="#" ngbDropdownToggle>Employee</a>
+      <li class="nav-item" routerLinkActive = "active"><a class="nav-link" routerLink="home">Home</a></li>
+      <li class="nav-item dropdown" routerLinkActive = "active" ngbDropdown>
+        <a class="nav-link dropdown-toggle" ngbDropdownToggle>Employee</a>
         <div class="dropdown-menu" ngbDropdownMenu>
-          <a class="dropdown-item" href="#">Registration</a>
-        </div></li>
+          <a class="dropdown-item" routerLink="employees" routerLinkActive = "active">Registration</a>
+        </div>
+      </li>
     </ul>
     <div class="pull-right">
       <ul class="navbar-nav pull-right">
         <li class="nav-item dropdown" ngbDropdown>
           <a class="nav-link dropdown-toggle" ngbDropdownToggle>Sereysopheak</a>
-          <ul class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
-            <a class="dropdown-item" href="#">My Account</a>
-            <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="#">Notifications</a>
+          <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+            <a class="dropdown-item" >My Account</a>
+            <a class="dropdown-item" >Settings</a>
+            <a class="dropdown-item" >Notifications</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logout</a>
-          </ul>
+            <a class="dropdown-item" >Logout</a>
+          </div>
         </li>
       </ul>
     </div>
