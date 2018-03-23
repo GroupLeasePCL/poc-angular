@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeeRegistationComponent } from './employee-registation.component';
+import {EmployeeService} from '../employee.service';
+
 
 describe('EmployeeRegistationComponent', () => {
   let component: EmployeeRegistationComponent;

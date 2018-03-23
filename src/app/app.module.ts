@@ -12,6 +12,7 @@ import { EmployeeRegistationComponent } from './employee/employee-registation/em
 
 import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 
+import { EmployeeService } from './employee/employee.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
     DlDateTimePickerDateModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
