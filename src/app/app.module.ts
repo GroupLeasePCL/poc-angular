@@ -8,18 +8,22 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
+import { EmployeeRegistationComponent } from './employee/employee-registation/employee-registation.component';
 
+import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeeRegistationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    DlDateTimePickerDateModule,
     NgbModule.forRoot()
   ],
   providers: [],
