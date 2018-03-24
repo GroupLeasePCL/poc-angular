@@ -8,7 +8,7 @@
     </ng-template>
     <ng-template ngbPanelContent class="zeropadding">
 
-      <form>
+      <form #newEmployee="ngForm" (ngSubmit)="onCreate()"  >
 
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
@@ -17,21 +17,21 @@
             </span>
             <div class="form-row">
               <div class="col-md-4 mb-3">
-                <label for="firstname">First name</label>
-                <input type="text" class="form-control" id="firstname" placeholder="John" value="" required>
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="John" [(ngModel)]="emploee.firstName"   name="firstName"    required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="lastname">Last name</label>
-                <input type="text" class="form-control" id="lastname" placeholder="Snow" value="" required>
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Snow" [(ngModel)]="emploee.lastName"   name="lastName" required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="validationDefaultUsername">Birthdate</label>
+                <label for="birthDate">Birthdate</label>
 
                 <div class="form-group">
                   <div class="input-group">
-                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+                    <input class="form-control" placeholder="yyyy-mm-dd" name="birthDate" ngbDatepicker #a="ngbDatepicker" [(ngModel)]="emploee.birthDate"   name="birthDate" required>
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                      <button class="btn btn-outline-secondary" (click)="a.toggle()" type="button">
                         <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
                       </button>
                     </div>
@@ -41,42 +41,41 @@
             </div>
 
             <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="111 Bluff rd. Black Rock VIC 3193">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="111 Bluff rd. Black Rock VIC 3193" [(ngModel)]="emploee.address"   name="address" >
             </div>
 
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="email">Email Address</label>
-                <input type="text" class="form-control" id="email" placeholder="username@mail.com" required>
+                <input type="text" class="form-control" id="email" placeholder="username@mail.com" [(ngModel)]="emploee.email"   name="email" required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="contractNumber">Contract Number</label>
-                <input type="text" class="form-control" id="contractNumber" placeholder="02-000-0000" required>
+                <label for="contractNumber">Contact Number</label>
+                <input type="text" class="form-control" id="contactNumber" placeholder="02-000-0000" [(ngModel)]="emploee.contactNumber"   name="contactNumber" required>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="mobileNumber">Mobile Number</label>
-                <input type="text" class="form-control" id="mobileNumber" placeholder="080-000-0000" required>
+                <input type="text" class="form-control" id="mobileNumber" placeholder="080-000-0000" [(ngModel)]="emploee.mobileNumber"   name="mobileNumber" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="col-md-4 mb-3">
-                <label for="position">Position Applied</label>
-                <input type="text" class="form-control" id="position" placeholder="Java Developer" required>
+                <label for="appliedPosition">Position Applied</label>
+                <input type="text" class="form-control" id="position" placeholder="Java Developer" [(ngModel)]="emploee.appliedPosition"   name="appliedPosition" required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="salary">Expected Salary(THB)</label>
-                <input type="text" class="form-control" id="salary" placeholder="25,000" required>
+                <label for="expectedSalary">Expected Salary(THB)</label>
+                <input type="text" class="form-control" id="expectedSalary" placeholder="25,000" [(ngModel)]="emploee.expectedSalary"   name="expectedSalary" required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="refernce">Reference</label>
-                <input type="text" class="form-control" id="refernce" placeholder="080-000-0000" required>
+                <label for="reference">Reference</label>
+                <input type="text" class="form-control" id="reference" placeholder="080-000-0000" [(ngModel)]="emploee.reference"   name="reference" required>
               </div>
             </div>
 
-
-
+ 
           </li>
           <li class="list-group-item">
 
@@ -87,21 +86,21 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="degree">Degree</label>
-                <input type="text" class="form-control" id="degree" placeholder="Master Degress">
+                <input type="text" class="form-control" id="degree" placeholder="Master Degress" [(ngModel)]="emploee.degree"   name="degree" >
               </div>
               <div class="form-group col-md-6">
                 <label for="university">University</label>
-                <input type="text" class="form-control" id="university" placeholder="Chulalongkorn University">
+                <input type="text" class="form-control" id="university" placeholder="Chulalongkorn University" [(ngModel)]="emploee.university"   name="university" >
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="major">Major</label>
-                <input type="text" class="form-control" id="major" placeholder="Computer Science">
+                <input type="text" class="form-control" id="major" placeholder="Computer Science" [(ngModel)]="emploee.major"   name="major" >
               </div>
               <div class="form-group col-md-4">
                 <label for="gpa">GPA</label>
-                <input type="text" class="form-control" id="gpa" placeholder="4.00">
+                <input type="text" class="form-control" id="gpa" placeholder="4.00" [(ngModel)]="emploee.gpa"   name="gpa" >
               </div>
             </div>
 
@@ -113,33 +112,49 @@
             </span>
             <div class="form-row">
               <div class="col-md-4 mb-3">
-                <label for="validationDefault03">Company name</label>
-                <input type="text" class="form-control" id="compnay" placeholder="Chulalongkorn University" required>
+                <label for="companyname">Company name</label>
+                <input type="text" class="form-control" id="companyname" placeholder="Chulalongkorn University" [(ngModel)]="emploee.companyname"   name="companyname" required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="validationDefault04">Start Date</label>
-                <input type="text" class="form-control" id="startDate" placeholder="01/01/2018" required>
+                <label for="startDate">Start Date</label>
+                <!-- <input type="text" class="form-control" id="startDate" placeholder="01/01/2018" [(ngModel)]="emploee.startDate"   name="startDate" required> -->
+                <div class="input-group">
+                   <input class="form-control" placeholder="yyyy-mm-dd" name="startDate" ngbDatepicker #b="ngbDatepicker" [(ngModel)]="emploee.startDate"   name="startDate" required> 
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" (click)="b.toggle()" type="button">
+                        <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                      </button>
+                    </div>
+                  </div>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="validationDefault05">End Date</label>
-                <input type="text" class="form-control" id="endDate" placeholder="01/01/2018" required>
+                <label for="endDate">End Date</label>
+                <!-- <input type="text" class="form-control" id="endDate" placeholder="01/01/2018" [(ngModel)]="emploee.endDate"   name="endDate" required> -->
+                <div class="input-group">
+                    <input class="form-control" placeholder="yyyy-mm-dd" name="endDate" ngbDatepicker #d="ngbDatepicker" [(ngModel)]="emploee.endDate"   name="endDate" required>
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                        <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                      </button>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputEmail4">Role</label>
-                <input type="text" class="form-control" id="role" placeholder="Java Developer">
+                <label for="role">Role</label>
+                <input type="text" class="form-control" id="role" placeholder="Java Developer" [(ngModel)]="emploee.role"   name="role" >
               </div>
               <div class="form-group col-md-6">
-                <label for="inputPassword4">Responsibility</label>
-                <input type="text" class="form-control" id="responsibility" placeholder="Develop Java systems for clients">
+                <label for="responsibility">Responsibility</label>
+                <input type="text" class="form-control" id="responsibility" placeholder="Develop Java systems for clients" [(ngModel)]="emploee.responsibility"   name="responsibility" >
               </div>
             </div>
 
             <div class="form-row" class="right">
               <button type="button" style="width: 250px;" class="btn btn-outline-primary">Cancel</button>
-              <button type="button" style="width: 250px;" class="btn btn-success">Create</button>
-
+              <button type="submit" style="width: 250px;" class="btn btn-success"  >Create</button>
+              <!-- (click)="onCreate()"  -->
             </div>
           </li>
         </ul>
