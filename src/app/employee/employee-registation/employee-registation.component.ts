@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Employee} from '../employee';
 import { NGXLogger } from 'ngx-logger';
+import {EmployeeService} from '../employee.service';
 @Component({
   selector: 'app-employee-registation',
   templateUrl: './employee-registation.component.html',
@@ -19,7 +20,7 @@ export class EmployeeRegistationComponent implements OnInit {
     // mobileNumber: "",
     // position: ""
   // };
-  constructor(private logger: NGXLogger) {
+  constructor(private logger: NGXLogger, private employeeService: EmployeeService ) {
     this.logger.debug('Your log message goes here');
     this.logger.debug('Multiple', 'Argument', 'support');
   }
@@ -35,7 +36,7 @@ export class EmployeeRegistationComponent implements OnInit {
     this.logger.debug('birthDate: ' + this.emploee.birthDate);
     this.logger.debug('address: ' + this.emploee.address);
     this.logger.debug('email: ' + this.emploee.email);
-    this.logger.debug('contractNumber: ' + this.emploee.contractNumber);
+    this.logger.debug('contractNumber: ' + this.emploee.contactNumber);
     this.logger.debug('mobileNumber: ' + this.emploee.mobileNumber);
     this.logger.debug('appliedPosition: ' + this.emploee.appliedPosition );
     this.logger.debug('expectedSalary: ' + this.emploee.expectedSalary);
@@ -49,6 +50,8 @@ export class EmployeeRegistationComponent implements OnInit {
     this.logger.debug('endDate: ' + this.emploee.endDate);
     this.logger.debug('role: ' + this.emploee.role);
     this.logger.debug('responsibility: ' + this.emploee.responsibility); 
+
+    this.employeeService.addEmployee(this.emploee);
   }
 
 }
