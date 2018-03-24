@@ -1,4 +1,5 @@
 export class Employee {
+    applicationId : string;
     firstName: string;
     lastName: string;
     birthDate: Date;

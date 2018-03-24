@@ -43,5 +43,14 @@ export class EmployeeService {
 
   }
 
+  updateEmployee(employee:Employee){
+
+    this.http.put("http://172.255.152.115:8081/employment-applications/"+employee.applicationId+"/personal-info",employee)
+    .subscribe(data => {
+      console.log(data);
+    });
+  }
+
+
 
 }

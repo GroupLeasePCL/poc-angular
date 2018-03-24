@@ -13,6 +13,10 @@ import { EmployeeRegistationComponent } from './employee/employee-registation/em
 import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { EmployeeService } from './employee/employee.service';
+
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,9 @@ import { EmployeeService } from './employee/employee.service';
     AppRoutingModule,
     DlDateTimePickerDateModule,
     LoggerModule.forRoot({serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule,
+    HttpModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
