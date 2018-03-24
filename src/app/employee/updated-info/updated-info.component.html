@@ -1,12 +1,117 @@
 
   <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
+    <h3 class="modal-title">Applicant Detail</h3>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <p>One fine body&hellip;</p>
+      <ngb-tabset [justify]="currentJustify">
+          <form>
+            <ngb-tab title="Personal Information">
+              <ng-template ngbTabContent>
+                  <div class="container">
+                      <div class="form-row">
+                          <div class="col-md-6">
+                              <label for="firstName">First name</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="John"  name="firstName" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="lastname">Last name</label>
+                              <input type="text" class="form-control" id="lastname" placeholder="Snow"  name="lastname" required>
+                          </div>
+                          
+                      </div>
+                      <div class="form-row">
+                          <div class="col-md-12">
+                              <label for="Address">Address</label>
+                              <input type="text" class="form-control" id="address" placeholder="111 Bluff rd. Black Rock VIC 3193"  name="address" required>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="col-md-6">
+                              <label for="email">Email Address</label>
+                              <input type="text" class="form-control" id="email" placeholder="username@mail.com"  name="email" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="contractnumber">Contract Number</label>
+                              <input type="text" class="form-control" id="contractno" placeholder="02-000-0000"  name="contractno" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="mobilenumber">Mobile Number</label>
+                              <input type="text" class="form-control" id="mobileno" placeholder="080-000-0000"  name="mobileno" required>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="col-md-6">
+                              <label for="position">Position Applied</label>
+                              <input type="text" class="form-control" id="position" placeholder="Java developer"  name="position" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="Salary">Expected Salary</label>
+                              <input type="text" class="form-control" id="salary" placeholder="150000"  name="position" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="reference">Reference</label>
+                              <input type="text" class="form-control" id="reference" placeholder=""  name="reference" required>
+                          </div>
+                      </div>
+                  </div>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+              <ng-template ngbTabTitle>Education</ng-template>
+              <ng-template ngbTabContent>
+                  <div class="container">
+                      <div class="form-row">
+                          <div class="col-md-12">
+                              <label for="degree">Degree</label>
+                              <input type="text" class="form-control" id="degree" placeholder="Master's degree"  name="degree" required>
+                          </div>
+                          <div class="col-md-12">
+                              <label for="University">University</label>
+                              <input type="text" class="form-control" id="University" placeholder="Chulalongkong University"  name="university" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="major">Major</label>
+                              <input type="text" class="form-control" id="major" placeholder="Computer science"  name="major" required>
+                          </div>
+                          <div class="col-md-6">
+                              <label for="gpa">GPA</label>
+                              <input type="text" class="form-control" id="gpa" placeholder="4.00"  name="GPA" required>
+                          </div>
+                      </div>
+                  </div>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Working experience">
+              <ng-template ngbTabContent>
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control" id="degree" placeholder="Company name"  name="company" required>
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Role">Role</label>
+                            <input type="text" class="form-control" id="role" placeholder="Java developer"  name="role" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Responsibility">Responsibility</label>
+                            <input type="text" class="form-control" id="responsibility" placeholder="Develop Java systems for clients"  name="role" required>
+                        </div>
+                    </div>
+                </div>
+              </ng-template>
+            </ngb-tab>
+          </form>
+        </ngb-tabset>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-light" (click)="activeModal.close('Close click')">Close</button>

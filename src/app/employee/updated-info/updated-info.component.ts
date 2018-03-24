@@ -10,8 +10,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class UpdatedInfoComponent implements OnInit {
 
   closeResult: string;
-
-
+  
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
