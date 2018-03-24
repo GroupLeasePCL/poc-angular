@@ -1,0 +1,153 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>
+        <b>Employee information</b>
+      </span>
+    </ng-template>
+    <ng-template ngbPanelContent class="zeropadding">
+
+      <form>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <span>
+              <h5><b>Personal information</b></h5>
+            </span>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="firstname">First name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="John" value="" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="lastname">Last name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Snow" value="" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefaultUsername">Birthdate</label>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                        <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="111 Bluff rd. Black Rock VIC 3193">
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="email">Email Address</label>
+                <input type="text" class="form-control" id="email" placeholder="username@mail.com" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="contractNumber">Contract Number</label>
+                <input type="text" class="form-control" id="contractNumber" placeholder="02-000-0000" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="text" class="form-control" id="mobileNumber" placeholder="080-000-0000" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="position">Position Applied</label>
+                <input type="text" class="form-control" id="position" placeholder="Java Developer" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="salary">Expected Salary(THB)</label>
+                <input type="text" class="form-control" id="salary" placeholder="25,000" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="refernce">Reference</label>
+                <input type="text" class="form-control" id="refernce" placeholder="080-000-0000" required>
+              </div>
+            </div>
+
+
+
+          </li>
+          <li class="list-group-item">
+
+
+            <span>
+              <h5><b>Education</b></h5>
+            </span>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="degree">Degree</label>
+                <input type="text" class="form-control" id="degree" placeholder="Master Degress">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="university">University</label>
+                <input type="text" class="form-control" id="university" placeholder="Chulalongkorn University">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="major">Major</label>
+                <input type="text" class="form-control" id="major" placeholder="Computer Science">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="gpa">GPA</label>
+                <input type="text" class="form-control" id="gpa" placeholder="4.00">
+              </div>
+            </div>
+
+          </li>
+          <li class="list-group-item">
+
+            <span>
+              <h5><b>Working Experience</b></h5>
+            </span>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault03">Company name</label>
+                <input type="text" class="form-control" id="compnay" placeholder="Chulalongkorn University" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault04">Start Date</label>
+                <input type="text" class="form-control" id="startDate" placeholder="01/01/2018" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault05">End Date</label>
+                <input type="text" class="form-control" id="endDate" placeholder="01/01/2018" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Role</label>
+                <input type="text" class="form-control" id="role" placeholder="Java Developer">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Responsibility</label>
+                <input type="text" class="form-control" id="responsibility" placeholder="Develop Java systems for clients">
+              </div>
+            </div>
+
+            <div class="form-row" class="right">
+              <button type="button" style="width: 250px;" class="btn btn-outline-primary">Cancel</button>
+              <button type="button" style="width: 250px;" class="btn btn-success">Create</button>
+
+            </div>
+          </li>
+        </ul>
+
+
+      </form>
+
+    </ng-template>
+  </ngb-panel>
+
+</ngb-accordion>
