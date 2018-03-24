@@ -4,7 +4,7 @@ export class Employee {
     birthDate: Date;
     address: string;
     email: string;
-    contractNumber: string;
+    contactNumber: string;
     mobileNumber: string;
     appliedPosition : string;
     expectedSalary: number;
