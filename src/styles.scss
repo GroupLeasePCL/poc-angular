@@ -1,6 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.min.css";
 
 body {
   padding-top: 80px;
+}
+
+.container {
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+
+
+  @media (min-width: 1900px) {
+    max-width: 1800px;
+  }
+}
+.panel {
+  border: 1px solid #DEDEDE;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  padding: 20px 10px;
+}
+.table {
+  @media (min-width: 992px) {
+    font-size: 1.2em;
+  }  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+  }
+  .table-head {
+      background-color: #27282C;
+      color: white;
+  }
+  .table-body {
+      .row {
+          background-color: #FFFFFF;
+          transition: 150ms ease-in-out;
+
+          &.alt {
+              background-color: #ECECEC;
+          }
+
+          &>div{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+      }
+  }
 }

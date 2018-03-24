@@ -1,0 +1,59 @@
+<div class="filter-pane">
+  <form class="form-inline">
+    <div class="input-group search">
+      <div class="input-group-prepend" id="search-addon">
+        <button class="btn btn-lg">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+      <input type="text" class="form-control" placeholder="Search ..." aria-describedby="search-addon">
+    </div>
+    <label>Seach by:</label>
+    <div class="btn-group btn-group-toggle">
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="criteria.applicationId" name="filter">
+        Application ID
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="criteria.firstName"  name="filter">
+        First Name
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="criteria.lastName"  name="filter">
+        LastName 
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="criteria.email"  name="filter">
+        Email
+      </label>
+    </div>
+  </form>
+</div>
+<div class="table">
+  <div class="row table-head">
+    <div class="col-md-2" >First Name</div>
+    <div class="col-md-2">Last Name</div>
+    <div class="col-md-3">Email</div>
+    <div class="col-md-4">Address</div>
+    <div class="col-md-1">Expand</div>
+  </div>
+  <virtual-list
+    class="table-body"
+    [source$]="source$"
+    [visibleChildren]="10"
+    (update)="scrollItems = $event"
+    (change)="visibleItems = $event"
+    (end)="fetchMore($event)">
+      <div class="row" #virtualListChildElement *ngFor="let item of scrollItems" [class.alt]="item.index % 2 === 0">
+        <div class="col-md-2">{{item.firstName}}</div>
+        <div class="col-md-2">{{item.lastName}}</div>
+        <div class="col-md-3" title="{{item.email}}">{{item.email}}</div>
+        <div class="col-md-4" title="{{item.address}}">{{item.address}}</div>
+        <div class="col-md-1 text-center"><span class="fa fa-external-link" (click)="openUpdateComponent(item.applicationId)"></span></div>
+      </div>
+  </virtual-list>
+</div>
+
+<div class="status">
+  Showing <span class="badge">{{visibleItems?.start + 1}}</span> - <span class="badge">{{visibleItems?.end}}</span> of <span class="badge">{{employees?.length}}</span>
+</div>
