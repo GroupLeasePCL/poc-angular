@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
+import { UpdatedInfoComponent } from './employee/updated-info/updated-info.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     AppNavbarComponent,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    UpdatedInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { HomeComponent } from './home/home.component';
     NgbModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[UpdatedInfoComponent]
 })
 export class AppModule { }

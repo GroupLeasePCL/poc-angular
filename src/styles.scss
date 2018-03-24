@@ -4,3 +4,17 @@
 body {
   padding-top: 80px;
 }
+
+.modal-dialog {
+  @media (min-width: 1200px) {
+    max-width: 1000px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+
+  @media (min-width: 1900px) {
+    max-width: 1800px;
+  }
+}
