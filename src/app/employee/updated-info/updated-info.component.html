@@ -144,5 +144,9 @@
   </ngb-tabset>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-light" (click)="activeModal.close('Close click')">Close</button>
+  <div class="form-row right">
+    <button type="button" class="btn btn-outline-primary" (click)="activeModal.close('Close click')">Cancel</button>
+    <button type="submit" class="btn btn-success">Save</button>
+  </div>
+
 </div>
